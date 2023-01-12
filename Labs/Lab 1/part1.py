@@ -1,6 +1,8 @@
 import matplotlib.pyplot as plt
 import time
 
+# recursive
+
 
 def fib1(n):
     if n == 0:
@@ -11,6 +13,7 @@ def fib1(n):
     return fib1(n-1) + fib1(n-2)
 
 
+# iterative
 def fib2(n):
     nums = [0, 1]
     if n == 0:
