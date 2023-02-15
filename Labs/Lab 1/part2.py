@@ -16,14 +16,17 @@ def fib2(n):
 if __name__ == '__main__':
     fib1Vals = []
     fib2Vals = []
-    nVals = []
-    for i in range(0, 5):
-        n = int(input("Enter a number: "))
-        nVals.append(n)
-
+    nVals = [1024, 4096, 16384, 65536, 262144, 524288]
+    for i in range(0, 6):
         start_time = time.time()
-        fib2val = fib2(n)
+        fib2val = fib2(nVals[i])
         fib2Vals.append(time.time() - start_time)
+
+    print("Fib2:")
+    print("---------------------")
+    for j in range(0, 6):
+        print("%d %lf" % (nVals[j], fib2Vals[j]))
+    print("---------------------")
 
     plt.plot(nVals, fib2Vals)
     plt.xlabel('n')
